@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <script type="text/javascript">
+      function validate() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        if (name == "") {
+          document.getElementById("name_error").innerText =
+            "** please enter your name";
+          return false;
+        }
+        if (email == "") {
+          document.getElementById("email_error").innerText =
+            "** please enter your email";
+          return false;
+        }
+        if (password.length < 6) {
+          alert("password must be 6 characters long");
+        }
+      }
+    </script>
+    <style>
+      .validation_error {
+        color: red;
+        font-style: italic;
+        font-size: 14px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          id="logo"
+          src="https://cdn.vectorstock.com/i/500p/35/51/an-eagle-design-isolated-on-white-background-bird-vector-54943551.jpg"
+          title="eStore"
+          alt="estore"
+        />
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./products.html">Products</a></li>
+        </ul>
+        <a href="./cart.html"
+          ><img src="./assets/cart.svg" class="cart-icon"
+        /></a>
+        <div id="login_reg_panel">
+          <a href="login.html">Login</a>
+          <a href="register.html" class="register">Register</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Registration Form</h1>
+      <form action="container" onsubmit="return validate()">
+        <div id="register_form">
+          <div>
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="name"
+              name="name"
+            />
+            <span class="validation_error" id="name_error"></span>
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="example@gmail.com" id="email" />
+            <span class="validation_error" id="email_error"></span>
+          </div>
+
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter password" id="password" />
+          </div>
+          <fieldset>
+            <legend>Gender</legend>
+            <div>
+              <label for="male">Male:</label>
+              <input type="radio" id="male" value="male" name="gender" />
+            </div>
+            <div>
+              <label for="female">Female:</label>
+              <input type="radio" id="female" value="female" name="gender" />
+            </div>
+          </fieldset>
+          <div>
+            <input type="checkbox" id="terms" />
+            <label for="terms">Do you agree with terms?</label>
+          </div>
+          <div id="btn">
+            <button type="submit">Submit</button>
+            <a href="./login.html">Already have an account?</a>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
