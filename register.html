@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="./css/form.css" type="text/css" />
     <script type="text/javascript">
       function validate() {
         let name = document.getElementById("name").value;
@@ -12,17 +13,30 @@
         let password = document.getElementById("password").value;
         if (name == "") {
           document.getElementById("name_error").innerText =
-            "** please enter your name";
+            "**please enter your name";
           return false;
+        }else {
+          document.getElementById("name_error").innerText = "";
         }
         if (email == "") {
           document.getElementById("email_error").innerText =
             "** please enter your email";
           return false;
+        }else {
+          document.getElementById("email_error").innerText = "";
+        }
+        if (password == "") {
+          document.getElementById("password_error").innerText =
+            "** please enter the password";
+          return false;
+        } else {
+          document.getElementById("password_error").innerText = "";
         }
         if (password.length < 6) {
           alert("password must be 6 characters long");
+          return false;
         }
+        return true;
       }
     </script>
     <style>
@@ -58,50 +72,58 @@
         </div>
       </nav>
     </header>
+
     <main>
       <h1>Registration Form</h1>
-      <form action="container" onsubmit="return validate()">
-        <div id="register_form">
-          <div>
-            <label for="name">Full Name:</label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              id="name"
-              name="name"
-            />
-            <span class="validation_error" id="name_error"></span>
-          </div>
+      <form action="./login.html" onsubmit="return validate()">
+        <div class="form_row">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            name="name"
+          />
+          <span class="validation_error" id="name_error"></span>
+        </div>
 
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" placeholder="example@gmail.com" id="email" />
-            <span class="validation_error" id="email_error"></span>
-          </div>
+        <div class="form_row">
+          <label for="email">Email:</label>
+          <input type="email" placeholder="example@gmail.com" id="email" />
+          <span class="validation_error" id="email_error"></span>
+        </div>
 
+        <div class="form_row">
+          <label for="password">Password:</label>
+          <input type="password" placeholder="Enter password" id="password" />
+          <span class="validation_error" id="password_error"></span>
+        </div>
+
+        <p>Gender:</p>
+        <div id="gender">
           <div>
-            <label for="password">Password:</label>
-            <input type="password" placeholder="Enter password" id="password" />
+            <input type="radio" id="male" value="male" name="gender" />
+            <label for="male">Male</label>
           </div>
-          <fieldset>
-            <legend>Gender</legend>
-            <div>
-              <label for="male">Male:</label>
-              <input type="radio" id="male" value="male" name="gender" />
-            </div>
-            <div>
-              <label for="female">Female:</label>
-              <input type="radio" id="female" value="female" name="gender" />
-            </div>
-          </fieldset>
           <div>
-            <input type="checkbox" id="terms" />
-            <label for="terms">Do you agree with terms?</label>
+            <input type="radio" id="female" value="female" name="gender" />
+            <label for="female">Female</label>
           </div>
-          <div id="btn">
-            <button type="submit">Submit</button>
-            <a href="./login.html">Already have an account?</a>
+          <div>
+            <input type="radio" id="other" value="other" name="gender" />
+            <label for="other">Other</label>
           </div>
+        </div>
+
+        <div>
+          <input type="checkbox" id="terms" />
+          <label for="terms">Do you agree with terms?</label>
+        </div>
+        <hr />
+
+        <div id="btn">
+          <button type="submit">Submit</button>
+          <a href="./login.html">Already have an account?</a>
         </div>
       </form>
     </main>

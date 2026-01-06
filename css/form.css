@@ -1,0 +1,52 @@
+main {
+  background-color: white;
+  border: 2px solid black;
+  padding: 2rem;
+  width: 30%;
+  margin: 5rem auto;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.form_row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.form_row label {
+  width: 30%;
+  padding: 0.3rem;
+}
+.form_row input {
+  padding: 0.3rem;
+  width: 60%;
+}
+
+#gender {
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
+}
+button {
+  background-color: rgb(0, 119, 255);
+  color: white;
+  border: 2px solid black;
+  padding: 5px;
+}
+button:hover {
+  background-color: rgb(0, 85, 183);
+  cursor: pointer;
+}
+#btn {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  margin: 1rem 0;
+}
