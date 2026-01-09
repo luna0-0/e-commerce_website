@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
     <link rel="stylesheet" href="./css/form.css" type="text/css" />
+    <link rel="stylesheet" href="./css/cart.css" type="text/css" />
 
     <title>Cart</title>
   </head>
@@ -37,8 +38,40 @@
         <h1>Your Cart</h1>
         <img src="./assets/cart.svg" />
       </div>
+      <hr />
+
       <form>
-        <input type="number" />
+        <div class="form_row">
+          <label for="Item1">Item</label>
+          <div class="cost">$10</div>
+          <input type="number" id="Item1" value="1" min="1" />
+          <img src="./assets/trash.svg" class="trash" title="move to trash"/>
+        </div>
+
+        <div class="form_row">
+          <label for="Item2">Item</label>
+          <div class="cost">$10</div>
+          <input type="number" id="Item2" value="1" min="1" />
+          <img src="./assets/trash.svg" class="trash" title="move to trash"/>
+        </div>
+        <div class="form_row">
+          <label for="Item3">Item</label>
+          <div class="cost">$10</div>
+          <input type="number" id="Item3" value="1" min="1" />
+          <img src="./assets/trash.svg" class="trash" title="move to trash"/>
+        </div>
+        <div class="form_row">
+          <label for="Item4">Item</label>
+          <div class="cost">$10</div>
+          <input type="number" id="Item4" value="1" min="1" />
+          <img src="./assets/trash.svg" class="trash" title="move to trash"/>
+        </div>
+
+        <hr />
+        <div>
+          <strong class="total-cost">Total: $40</strong>
+        </div>
+        <button>Add Items</button>
       </form>
     </main>
   </body>

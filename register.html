@@ -15,14 +15,14 @@
           document.getElementById("name_error").innerText =
             "**please enter your name";
           return false;
-        }else {
+        } else {
           document.getElementById("name_error").innerText = "";
         }
         if (email == "") {
           document.getElementById("email_error").innerText =
             "** please enter your email";
           return false;
-        }else {
+        } else {
           document.getElementById("email_error").innerText = "";
         }
         if (password == "") {
@@ -75,6 +75,7 @@
 
     <main>
       <h1>Registration Form</h1>
+      <hr />
       <form action="./login.html" onsubmit="return validate()">
         <div class="form_row">
           <label for="name">Full Name:</label>
