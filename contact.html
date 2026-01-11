@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          id="logo"
+          src="https://cdn.vectorstock.com/i/500p/35/51/an-eagle-design-isolated-on-white-background-bird-vector-54943551.jpg"
+          title="eStore"
+          alt="estore"
+        />
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="./products.html">Products</a></li>
+        </ul>
+        <a href="./cart.html"
+          ><img src="./assets/cart.svg" class="cart-icon"
+        /></a>
+        <div id="login_reg_panel">
+          <a href="login.html">Login</a>
+          <a href="./register.html" class="register">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact Us</h1>
+      <form>
+        <div class="form_row">
+          <label for="name">Full Name: </label>
+          <input type="text" placeholder="Your Name" id="name" />
+        </div>
+        <div class="form_row">
+          <label for="email">Email: </label>
+          <input type="email" placeholder="example@gmail.com" id="email" />
+        </div>
+        <div>
+            <label for="msg">Message:</label>
+            <textarea id="msg" rows="8" cols="50"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

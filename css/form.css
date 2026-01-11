@@ -51,3 +51,8 @@ button:hover {
 hr {
   margin: 1rem 0;
 }
+
+textarea{
+  display: block;
+  margin-top: 0.5rem;
+}
