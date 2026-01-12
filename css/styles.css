@@ -70,5 +70,10 @@ main{
   margin-top: 5rem;
 }
 
-
-
+footer{
+  background-color: rgb(86, 85, 85);
+  height: 25vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
