@@ -2,12 +2,10 @@
   margin: 0;
   padding: 0;
 }
-body {
-  background-color: rgb(252, 231, 197);
-}
-h1 {
-  text-align: center;
-}
+/* body {
+  background-color: rgb(255, 255, 255);
+} */
+
 header a {
   text-decoration: none;
   color: black;
@@ -24,11 +22,11 @@ nav a {
   float: left;
 }
 nav a:hover {
-  background-color: rgb(239, 241, 208);
-  color: rgb(92, 94, 93);
+  background-color: rgb(245, 221, 143);
+  color: rgb(41, 42, 42);
 }
 nav {
-  background-color: rgb(217, 219, 187);
+  background-color: rgb(224, 192, 87);
   height: 10vh;
   width: 100%;
   display: flex;
@@ -70,6 +68,25 @@ main {
   margin-top: 5rem;
 }
 
+.hero{
+  height:50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.hero h1 {
+  font-size: 5rem;
+}
+.hero a{
+  background-color: rgb(224, 192, 87);
+  padding:1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
 footer {
   background-color: rgba(226, 226, 226, 0.5);
   height: 25vh;
@@ -80,7 +97,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
 }
 footer > div {
   padding: 2rem;
